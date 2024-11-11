@@ -2,6 +2,7 @@ import cv2
 faceCascade = cv2.CascadeClassifier("Cascades/haarcascade_frontalface_default.xml")
 cam=cv2.VideoCapture(0)
 while True:
+    
     _, sqrc = cam.read()
     # sqrc = cv2.flip(sqrc, -1) # if the camera is flipped
     gray = cv2.cvtColor(sqrc, cv2.COLOR_BGR2GRAY)
@@ -19,3 +20,4 @@ while True:
 
 cam.release()
 cv2.destroyAllWindows()
+
