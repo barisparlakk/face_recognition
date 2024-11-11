@@ -9,7 +9,7 @@ while True:
     faces = faceCascade.detectMultiScale(gray,
                                          scaleFactor = 1.1,
                                          minNeighbors = 5,
-                                         minSize = (30,30)
+                                         minSize = (20,20)
                                          )
     for (x, y, w, h) in faces:
         cv2.rectangle(sqrc, (x, y),(x+w, y+h), (255, 0, 0), 2)
@@ -20,4 +20,3 @@ while True:
 
 cam.release()
 cv2.destroyAllWindows()
-
